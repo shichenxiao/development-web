@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
+		<title>登录界面</title>
+		<script src="js/jquery-2.2.2.js"></script>
+	</head>
+	<style>
+		*{
+			margin:0 auto;
+			padding:0;
+		}
+		.text{width:80%;height:5rem; background-color:darkgray; opacity: 0.5;text-align: center;margin-top:10rem}
+		.text input{float:left;border:none;height:40px;line-height:30px;width:100%; text-indent:32px;}
+ 
+		body{
+			background-image:url(img/11.jpg);
+			background-size: cover;
+		}
+		#btn{
+			background-color: orangered;
+    		border: none;
+    		color: white;
+    		width:80%;
+    		height:2rem;
+    		line-height:2rem;
+    		text-align: center;
+    		text-decoration: none;
+    		display: inline-block;
+    		font-size: 16px;
+    		margin:0.6rem 2.3rem;
+    		cursor: pointer;
+    		border-radius: 8px;
+		}
+		#btn a{
+			color:white;
+			text-decoration: none;
+			text-align: center;
+		}
+		#btn a:hover{
+			color:white;
+			text-decoration: none;
+		}
+		.missing{
+			float:left;
+			margin-top:0.2rem;
+			margin-left:2rem;
+		}
+		.sign{
+			float:right;
+			margin-top:0.2rem;
+			margin-right:2rem;
+		}
+		.missing a{
+			text-decoration: none;
+			color:white;
+			font-size:12px;
+		}
+		.sign a{
+			text-decoration: none;
+			color:white;
+			font-size:12px;
+		}
+	</style>
+	<body>
+		<img src="">
+		<div class="text">
+			<input type="text" placeholder="手机号">
+			<input type="password" placeholder="密码">
+			
+		</div>
+		<div id="btn"><a href="#">登录</a></div>
+		<div class="missing"><a href="#">忘记密码</a></div>
+		<div class="sign"><a href="#">立即注册</a></div>
+	</body>
+	<script>
+		$('#btn').click(function(){
+//              var name=$('#qname').val();
+//              var pass=$('#qpassword').val();
+                $.ajax({
+                    type:'get',
+                    url:' http://datainfo.duapp.com/shopdata/userinfo.php',
+                    data:{status:'login',userID:$('#user').val(),password:$('#password').val()},
+            
+                    success:function(data){
+                        if(data == 0){
+                            alert('用户不存在');
+                        }
+                        else if(data == 2){
+                            alert('用户名与密码不符');
+                        }
+                        else{                         
+                            window.location.href="goodslist.html";
+                        }          
+                    }
+                })
+            })      
+	</script>
+</html>
+<!--window.location.href="goodsInfo.html#" + this.getAttribute('goodID');
+
+//var goodsId = wondow.location.hash.slice(1);去掉-->
+

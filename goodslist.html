@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>商品列表</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    	<script src="js/jquery-2.2.2.js"></script>
+    	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+    	<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+	</head>
+	<style>
+	*{
+			margin:0 auto;
+			padding:0;
+		}
+		.ui-bar-f{
+			background-color: white;
+		}
+		.ui-icon-one:after {  
+           background-image: url(img/首页.png);        
+           background-size: 1.5rem 1.5rem;  
+		}  
+		.ui-icon-two:after {  
+           background-image: url(img/单品.png);        
+           background-size: 1.5rem 1.5rem;  
+		} 
+		.ui-icon-three:after {  
+           background-image: url(img/礼物盒.png);        
+           background-size: 2rem 2rem;  
+		} 
+		.ui-icon-four:after {  
+           background-image: url(img/购物车.png);        
+           background-size: 1.5rem 1.5rem;  
+		} 
+		.ui-icon-five:after {  
+           background-image: url(img/用户.png);        
+           background-size: 1.5rem 1.5rem;  
+		} 
+		#header{
+			height:3.5rem;
+			
+		}
+		#headerone{
+			float:left;
+			margin-top:0.9rem;
+			margin-left:0.7rem;
+		}
+		#headerone img{
+			height:1.5rem;
+			width:1.5rem;
+		}
+		#headertwo{
+			width:75%;
+		}
+		#headerthree{
+			float:right;
+			margin-top:-2.3rem;
+			margin-right:0.3rem;
+		}
+		#headerthree img{
+			height:2rem;
+			width:2rem;
+		}
+		.wrapper{
+			height: 50px;
+			position: relative;
+			margin-bottom: 1rem;
+		}
+		.wrapper .scroller{
+			position: absolute;
+		}
+		.wrapper li{
+			height: 50px;
+			float: left;
+			line-height: 50px;
+			padding: 0 20px;
+		}
+		.cur{
+			border-bottom:3px solid pink;
+			
+		}
+		.cur a{
+			color:pink;
+			text-decoration: none;
+		}
+		
+		
+		
+		.one a{
+			color:black;
+			text-decoration: none;
+		}
+		.one a:hover{
+			color:pink;
+			text-decoration: none;
+		}
+		.one a:visited{
+			color:pink;
+			text-decoration: none;
+		}
+		
+		ul li{
+			list-style: none;
+			float:left;	
+			margin:1.1rem;		
+		}
+		ul li img{
+			height:10rem;
+			width:9rem;			
+		}
+	</style>
+	<script src="js/jquery.1.11.3.min.js"></script>
+		<script src="js/iscroll.js"></script>
+		<script src="js/navbarscroll.js"></script>
+	<body>
+		<div data-role="page" id="page" >
+			<div data-role="header" data-theme="f" id="header" data-position="fixed" >
+				<div id="headerone"><img src="img/扫一扫.png"></div>
+				<div id="headertwo"><input type="search" ></div>
+				<div id="headerthree"><img src="img/二维码.png"></div>
+			</div>
+			<div id="content">
+				<div class="wrapper" id="wrap">
+					<div class="scroller">
+						<ul>
+							<li class="cur"><a href="#">最新</a></li>
+							<li class="one"><a href="#">推荐</a></li>
+							<li class="one"><a href="#">生活</a></li>
+							<li class="one"><a href="#">鞋包</a></li>
+							<li class="one"><a href="#">爱美</a></li>
+							<li class="one"><a href="#">饰品</a></li>
+							<li class="one"><a href="#">服装</a></li>
+						</ul>	
+					</div>
+				</div>
+				<script>
+					$(function(){
+						$('.wrapper').navbarscroll();
+					})
+				</script>
+				<ul id="goodList">
+				</ul>
+			</div>
+			<div data-role="footer" id="footer" data-position="fixed">
+				<div data-role="navbar">
+      				<ul>
+        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-one  ui-nodisc-icon">首页</a></li>
+        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-two  ui-nodisc-icon">单品</a></li>
+        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-three  ui-nodisc-icon">挑礼</a></li>
+        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-four  ui-nodisc-icon">购物车</a></li>
+        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-five  ui-nodisc-icon">我的</a></li>
+      				</ul>
+    			</div>
+			</div>
+		</div>
+	</body>
+	<script>
+	$('document').ready(function(){
+		$.ajax({
+			type:'get',
+			url:'http://datainfo.duapp.com/shopdata/getGoods.php',
+			dataType:'jsonp',		
+			success:function(data){
+				for(var i = 0; i < data.length; i++){
+					$('#goodList').html($('#goodList').html() + '<li goodsId = '+data[i].goodsId +'><img src = "'+data[i].goodsListImg + '"alt=""><p>'+data[i].goodsName.slice(0,8)+'...'+'</p></li>');
+					
+				}
+				$('#goodList').on('click',function(){
+						window.location.href="goodsInfo.html#" + this.getAttribute('data[i].goodsId');
+					})
+			}
+			
+		})
+		
+	})
+		
+	</script>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>首页</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    	<script src="js/jquery-2.2.2.js"></script>
+    	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+    	<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+	</head>
+	<style>
+		*{
+			margin:0 auto;
+			padding:0;
+		}
+		.ui-bar-f{
+			background-color: white;
+		}
+		.ui-icon-one:after {  
+           background-image: url(img/首页.png);        
+           background-size: 1.5rem 1.5rem;  
+		}  
+		.ui-icon-two:after {  
+           background-image: url(img/单品.png);        
+           background-size: 1.5rem 1.5rem;  
+		} 
+		.ui-icon-three:after {  
+           background-image: url(img/礼物盒.png);        
+           background-size: 2rem 2rem;  
+		} 
+		.ui-icon-four:after {  
+           background-image: url(img/购物车.png);        
+           background-size: 1.5rem 1.5rem;  
+		} 
+		.ui-icon-five:after {  
+           background-image: url(img/用户.png);        
+           background-size: 1.5rem 1.5rem;  
+		} 
+
+		#header{
+			height:3.5rem;
+			
+		}
+		#headerone{
+			float:left;
+			margin-top:0.9rem;
+			margin-left:0.7rem;
+		}
+		#headerone img{
+			height:1.5rem;
+			width:1.5rem;
+		}
+		#headertwo{
+			width:75%;
+		}
+		#headerthree{
+			float:right;
+			margin-top:-2.3rem;
+			margin-right:0.3rem;
+		}
+		#headerthree img{
+			height:2rem;
+			width:2rem;
+		}
+		.swiper-slide img{
+			width:100%;
+			height:7rem;
+		}
+		ul,li{
+			list-style: none;
+			color:black;
+		}
+		ul li a{
+			text-decoration: none;
+			color:black;
+		}
+		.wrapper{
+			height: 50px;
+			position: relative;
+		}
+		.wrapper .scroller{
+			position: absolute;
+		}
+		.wrapper li{
+			height: 50px;
+			float: left;
+			line-height: 50px;
+			padding: 0 20px;
+		}
+		.cur{
+			border-bottom:3px solid pink;
+			
+		}
+		.cur a{
+			color:pink;
+		}
+		.cur a:hover{
+			color:pink;
+		}
+		#image img{
+			width:100%;
+			height:10rem;
+		}
+	</style>
+		<script src="js/jquery.1.11.3.min.js"></script>
+		<script src="js/iscroll.js"></script>
+		<script src="js/navbarscroll.js"></script>
+	<body>
+		<div data-role="page" id="page" >
+			<div data-role="header" data-theme="f" id="header" data-position="fixed" >
+				<div id="headerone"><img src="img/扫一扫.png"></div>
+				<div id="headertwo"><input type="search" ></div>
+				<div id="headerthree"><img src="img/二维码.png"></div>
+			</div>
+			<div id="content">
+				<div id="banner">
+					<div class="swiper-container">
+    					<div class="swiper-wrapper">      	
+        					<div class="swiper-slide"><img src="img/banner3.jpg"></div>
+        					<div class="swiper-slide"><img src="img/banner2.jpg"></div>
+        					<div class="swiper-slide"><img src="img/banner4.jpg"></div>
+        			</div>  
+        				<div class="swiper-pagination"></div>
+    				</div>
+				</div>
+				<div class="wrapper" id="wrap">
+					<div class="scroller">
+						<ul>
+							<li class="cur"><a href="#">最新</a></li>
+							<li><a href="#">推荐</a></li>
+							<li><a href="#">生活</a></li>
+							<li><a href="#">鞋包</a></li>
+							<li><a href="#">爱美</a></li>
+							<li><a href="#">饰品</a></li>
+							<li><a href="#">服装</a></li>
+						</ul>	
+					</div>
+				</div>
+				<script>
+					$(function(){
+						$('.wrapper').navbarscroll();
+					})
+				</script>
+				<div id="image">
+					<div id="img1"><img src="img/banner5.jpg"></div>
+					<div id="img2"><img src="img/banner8.jpg"></div>
+					<div id="img3"><img src="img/banner9jpg.jpg"></div>
+					<div id="img4"></div>
+				</div>
+			</div>
+			<div data-role="footer" id="footer" data-position="fixed">
+				<div data-role="navbar">
+      				<ul>
+        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-one  ui-nodisc-icon">首页</a></li>
+        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-two  ui-nodisc-icon">单品</a></li>
+        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-three  ui-nodisc-icon">挑礼</a></li>
+        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-four  ui-nodisc-icon">购物车</a></li>
+        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-five  ui-nodisc-icon">我的</a></li>
+      				</ul>
+    			</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="js/swiper-3.4.2.min.js"></script>
+	<script> 
+		var mySwiper = new Swiper ('.swiper-container',{
+    		//direction: 'vertical',
+    		loop: true,//循环   
+    		pagination: '.swiper-pagination',
+    		autoplayDisableOnInteraction : false
+  		})        
+  	</script>
+</html>

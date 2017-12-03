@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>注册界面</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<script src="js/jquery-2.2.2.js"></script>
+	</head>
+	<style>
+		*{
+			margin:0 auto;
+			padding:0;
+		}
+		body{
+			background-image: url(img/18.jpg);
+			background-size: cover;
+		}
+		#one{
+			text-align: center;
+			background-color:white;
+			opacity: 0.5;
+			width:80%;
+			height:7rem;
+			margin-top:10rem;
+		}
+		#one input{
+			text-align: center;
+			height:2rem;
+			width:80%;
+			text-indent:32px;
+			border:none;
+			line-height:3rem;
+		}
+		#two{
+			text-align: center;
+		}
+		#btn{
+			background-color: orangered;
+    		border: none;
+    		color: white;
+    		width:80%;
+    		height:2rem;
+    		line-height:2rem;    		
+    		text-decoration: none;
+    		margin:0.8rem;
+    		display: inline-block;
+    		font-size: 16px;
+    		cursor: pointer;
+    		border-radius: 8px;
+		}
+	</style>
+	<body>
+        <div id="one" >
+            <form method="post" action="demoform.asp">         
+            	<input type="text" id="user" name="username" placeholder="昵称为3位以上" class="required">              	
+            	<input type="password" id="password" placeholder="输入密码" name="p">
+            	<input type="password" id="password" placeholder="确认密码" name="p">
+         	</form>
+        </div>                      
+         <div id="two">
+            	<a href="#pageone" id="btn">注册</a>          
+        </div>      
+	</body>
+	<script>
+	 $('#btn').click(function(){
+		$.ajax({
+			type:'get',
+			url:'http://datainfo.duapp.com/shopdata/userinfo.php',
+			data:{status:'register',userID:$('#user').val(),password:$('#password').val()},
+			
+			success:function(data){
+				if(data == 0){
+					alert('用户名已被使用，请重新命名');
+				}
+				else if(data == 2){
+					alert('数据库错误');
+				}
+				else{
+					alert("昵称：" + $('#user').val()+ '\n'+ "密码："+ $('#password').val());
+					window.location.href="sign-in.html";
+				}		
+			}
+		})
+	})	    
+	</script>
+</html>

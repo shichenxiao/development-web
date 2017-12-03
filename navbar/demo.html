@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul,li{
+			list-style: none;
+		}
+		.wrapper{
+			height: 50px;
+			position: relative;
+		}
+		.wrapper .scroller{
+			position: absolute;
+		}
+		.wrapper li{
+			height: 50px;
+			float: left;
+			line-height: 50px;
+			padding: 0 20px;
+		}
+		.cur{
+			border-bottom:3px solid red;
+		}
+	</style>
+	<script src="jquery.1.11.3.min.js"></script>
+	<script src="iscroll.js"></script>
+	<script src="navbarscroll.js"></script>
+</head>
+<body>
+	<div class="wrapper" id="wrap">
+		<div class="scroller">
+			<ul>
+				<li class="cur">首页</li>
+				<li>首页</li>
+				<li>首页</li>
+				<li>首页</li>
+				<li>首页</li>
+				<li>首页</li>
+				<li>首页</li>
+				<li>首页</li>
+				<li>首页</li>
+			</ul>	
+		</div>
+	</div>
+	<script>
+	$(function(){
+		$('.wrapper').navbarscroll();
+	})
+	</script>
+</body>
+</html>

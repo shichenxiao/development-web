@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link>
+		<meta charset="UTF-8">
+		<title>启动页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+
+	</head>
+	<style>
+	    .swiper-slide img{
+	    	height:100%;
+	    	width:100%;
+	    }
+	</style>
+	<body>
+		<div class="swiper-container">
+    		<div class="swiper-wrapper">
+        		<div class="swiper-slide"><img src="img/13.jpg"></div>
+        		<div class="swiper-slide"><img src="img/12.jpg"></div>
+        		<div class="swiper-slide"><img src="img/10.jpg"></div>
+        		<div class="swiper-slide"><img src="img/6.jpg"><span>立即购</span></div>
+        		
+    		</div>
+    		
+    	    		
+		</div>
+	</body>
+	<script src="js/jquery-2.2.2.js"></script>
+	<script src="js/swiper-3.4.2.jquery.min.js"></script>
+	
+	
+	<script>     
+//		if(localStorage.getItem('login')){
+//			window.location.href="goodslist.html";
+//		}
+//		localStorage.setItem('login','true');
+		//console.log(getItem('login'));
+  		var mySwiper = new Swiper ('.swiper-container', {
+    		//direction: 'vertical',
+    		loop: true,//循环   
+    		autoplayDisableOnInteraction : false
+  		})        
+  	</script>
+</html>
