@@ -19,53 +19,68 @@
 		}
 		.ui-icon-one:after {  
            background-image: url(img/首页.png);        
-           background-size: 1.5rem 1.5rem;  
+           background-size: 20px 20px;  
 		}  
 		.ui-icon-two:after {  
            background-image: url(img/单品.png);        
-           background-size: 1.5rem 1.5rem;  
+           background-size: 20px 20px;
 		} 
 		.ui-icon-three:after {  
            background-image: url(img/礼物盒.png);        
-           background-size: 2rem 2rem;  
+           background-size: 20px 20px;  
 		} 
 		.ui-icon-four:after {  
            background-image: url(img/购物车.png);        
-           background-size: 1.5rem 1.5rem;  
+           background-size: 20px 20px;
 		} 
 		.ui-icon-five:after {  
            background-image: url(img/用户.png);        
-           background-size: 1.5rem 1.5rem;  
+           background-size: 20px 20px;  
 		} 
-
 		#header{
-			height:3.5rem;
+			height:55px;
 			
 		}
 		#headerone{
 			float:left;
-			margin-top:0.9rem;
-			margin-left:0.7rem;
+			margin-top:13px;
+			margin-left:9px;
 		}
 		#headerone img{
-			height:1.5rem;
-			width:1.5rem;
+			height:23px;
+			width:23px;
 		}
 		#headertwo{
 			width:75%;
 		}
 		#headerthree{
 			float:right;
-			margin-top:-2.3rem;
-			margin-right:0.3rem;
+			margin-top:-38px;
+			margin-right:3px;
 		}
 		#headerthree img{
-			height:2rem;
-			width:2rem;
+			height:30px;
+			width:30px;
+		}
+		.list{
+			width:140px;
+			height:220px;
+			float:left;
+			list-style-type: none;
+			background-color: rgba(255,182,193,0.1);
+			margin-top:30px;
+			position: relative;
+		
+			margin-left:20px;
+		}
+		.list img{
+			width:140px;
+			height:130px;
+			float:left;
 		}
 		.swiper-slide img{
 			width:100%;
-			height:7rem;
+			height:100px;
 		}
 		ul,li{
 			list-style: none;
@@ -92,15 +107,12 @@
 			border-bottom:3px solid pink;
 			
 		}
-		.cur a{
-			color:pink;
-		}
-		.cur a:hover{
+		.cur{
 			color:pink;
 		}
 		#image img{
 			width:100%;
-			height:10rem;
+			height:120px;
 		}
 	</style>
 		<script src="js/jquery.1.11.3.min.js"></script>
@@ -110,7 +122,7 @@
 		<div data-role="page" id="page" >
 			<div data-role="header" data-theme="f" id="header" data-position="fixed" >
 				<div id="headerone"><img src="img/扫一扫.png"></div>
-				<div id="headertwo"><input type="search" ></div>
+				<div id="headertwo"><input type="search" id="search"></div>
 				<div id="headerthree"><img src="img/二维码.png"></div>
 			</div>
 			<div id="content">
@@ -127,13 +139,13 @@
 				<div class="wrapper" id="wrap">
 					<div class="scroller">
 						<ul>
-							<li class="cur"><a href="#">最新</a></li>
-							<li><a href="#">推荐</a></li>
-							<li><a href="#">生活</a></li>
-							<li><a href="#">鞋包</a></li>
-							<li><a href="#">爱美</a></li>
-							<li><a href="#">饰品</a></li>
-							<li><a href="#">服装</a></li>
+							<li class="cur">最新</li>
+							<li>推荐</li>
+							<li>生活</li>
+							<li>鞋包</li>
+							<li>爱美</li>
+							<li>饰品</li>
+							<li>服装</li>
 						</ul>	
 					</div>
 				</div>
@@ -149,14 +161,15 @@
 					<div id="img4"></div>
 				</div>
 			</div>
+			<div id="goodList"></div>
 			<div data-role="footer" id="footer" data-position="fixed">
 				<div data-role="navbar">
       				<ul>
-        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-one  ui-nodisc-icon">首页</a></li>
-        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-two  ui-nodisc-icon">单品</a></li>
+        				<li><a href="index.html" class="ui-btn ui-btn-icon-top ui-icon-one  ui-nodisc-icon">首页</a></li>
+        				<li><a href="goodslist.html" class="ui-btn ui-btn-icon-top ui-icon-two  ui-nodisc-icon">单品</a></li>
         				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-three  ui-nodisc-icon">挑礼</a></li>
-        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-four  ui-nodisc-icon">购物车</a></li>
-        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-five  ui-nodisc-icon">我的</a></li>
+        				<li><a href="shoppinglist.html" class="ui-btn ui-btn-icon-top ui-icon-four  ui-nodisc-icon">购物车</a></li>
+        				<li><a href="myself.html" class="ui-btn ui-btn-icon-top ui-icon-five  ui-nodisc-icon">我的</a></li>
       				</ul>
     			</div>
 			</div>
@@ -170,6 +183,37 @@
     		loop: true,//循环   
     		pagination: '.swiper-pagination',
     		autoplayDisableOnInteraction : false
-  		})        
+  		})  
+  		//搜索商品
+	$('#headertwo').on('click',function(){
+		var text = encodeURI($('#search').val());
+		console.log(text);
+		$.ajax({
+			type:'get',
+			url:'http://datainfo.duapp.com/shopdata/selectGoodes.php',
+			dataType:'jsonp',
+			data:{selectText:text},
+			success:function(data){
+				//console.log(data);
+				var str ='';
+				for(var i = 0; i < data.length; i++){
+					//console.log(data[i].goodsID);
+					str = str + '<div class="list"  goodsId = '+data[i].goodsID +'>'
+							  + '<img src = "'+data[i].goodsListImg + '"alt="">'
+							  + '<p>'+data[i].goodsName+'</p>'
+							  + '<p>'+data[i].price+'</p>'
+							  + '</div>';
+				}
+				$('#goodList').html(str);
+				$('.list').on('click',function(){
+						window.location.href="goodsInfo.html#" + this.getAttribute('goodsId');
+					
+				})
+			
+			}
+		});
+	})
+	
+  		
   	</script>
 </html>

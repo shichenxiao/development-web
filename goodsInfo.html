@@ -8,22 +8,124 @@
     	<script src="js/jquery-2.2.2.js"></script>
     	<script src="js/jquery.mobile-1.4.5.min.js"></script>
 	</head>
+	<style>
+		.ui-icon-one:after {  
+           background-image: url(img/首页.png);        
+           background-size: 25px 25px;  
+		}
+		.ui-icon-four:after {  
+           background-image: url(img/购物车.png);        
+           background-size:30px 30px;  
+		} 
+		#footer{
+			width:100%;
+			float:left;
+		}
+		#one img{
+			width:100%;
+			height:300px;
+		}
+		#two{
+			font-size:15px;
+		}
+		#three{
+			font-size:20px;
+			color:orangered;
+		}
+		#footer ul li a{
+			height:10px;
+		}
+		#add{
+			width: 25%;  
+			height:50px;
+        	padding:8px;  
+        	background-color: orangered;  
+        	border-color: #357ebd;  
+        	color: #fff;  
+        	text-align: center;  
+        	vertical-align: middle;  
+        	border: 1px solid transparent;  
+        	font-weight: 300;  
+        	font-size:15px;
+        	line-height:25px;
+		}
+		/*#add a{
+			background-color: orangered;
+			color:white;
+			height:0.7rem;!important
+			font-weight:100;
+		}*/
+		#buy{
+			width: 25%;  
+			height:50px;
+        	padding:8px;  
+        	background-color: orangered;  
+        	border-color: #357ebd;  
+        	color: #fff;  
+        	text-align: center;  
+        	vertical-align: middle;  
+        	border: 1px solid transparent;  
+        	font-weight: 300;  
+        	font-size:15px;
+        	line-height:25px;
+		}
+	</style>
 	<body>
-		<p></p>
+		<div  id="content">
+			<div id="one"></div>
+			<p id="two"></p>
+			<p id="three"></p>
+		<div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" id="footer"> 
+      			<ul>
+      				<li><a href="index.html" id="shou" class="ui-btn ui-btn-icon-top ui-icon-one  ui-nodisc-icon">首页</a></li>
+					<li><a href="shoppinglist.html" id="gou" class="ui-btn ui-btn-icon-top ui-icon-four  ui-nodisc-icon">购物车</a></li>
+        			<li id="add">加入购物车</li>
+        			<li id="buy">立即购买</li>
+        			
+      			</ul>
+      		
+    			</div>
+		</div>
 	</body>
 	<script>
-		var goodsId = window.location.hash.slice(1);
+		//获取商品信息
+		var goodsId = window.location.hash.slice(1);	
 		$.ajax({
 			type:'get',
 			url:'http://datainfo.duapp.com/shopdata/getGoods.php',
 			dataType:'jsonp',
 			data:{goodsID:goodsId},
 			success:function(data){
-				for(var i in data){
-					$('p').html(data[i].goodsName)
-				}
+				//console.log(data);
+//					$('#one').html('<img src = "'+data[0].goodsListImg + '"alt="">');
+//					$('#two').html(data[0].goodsName);
+//					$('#three').html('￥'+data[0].price);	
+					var str = '';
+					str = str + '<img src = "'+data[0].goodsListImg + '"alt="">'
+							  + '<h4>'+data[0].goodsName+'</h4>'
 				
 			}
+		});		
+		//加入购物车
+		$('#add').on('click',function(){
+			var username = localStorage.getItem('username');
+			console.log(username);
+			$.ajax({
+				type:'get',
+				url:' http://datainfo.duapp.com/shopdata/updatecar.php',
+				data:{userID:username,goodsID:goodsId},
+				success:function(data){
+					console.log(data);
+					if(data == 1){
+						alert('已添加到购物车');
+					}
+					else if(data == 0){
+						alert('添加失败');
+					}
+				}
+			});
 		})
 		
 	</script>

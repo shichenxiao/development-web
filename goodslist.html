@@ -19,51 +19,91 @@
 		}
 		.ui-icon-one:after {  
            background-image: url(img/首页.png);        
-           background-size: 1.5rem 1.5rem;  
+           background-size: 20px 20px;  
 		}  
 		.ui-icon-two:after {  
            background-image: url(img/单品.png);        
-           background-size: 1.5rem 1.5rem;  
+           background-size: 20px 20px;
 		} 
 		.ui-icon-three:after {  
            background-image: url(img/礼物盒.png);        
-           background-size: 2rem 2rem;  
+           background-size: 20px 20px;  
 		} 
 		.ui-icon-four:after {  
            background-image: url(img/购物车.png);        
-           background-size: 1.5rem 1.5rem;  
+           background-size: 20px 20px;
 		} 
 		.ui-icon-five:after {  
            background-image: url(img/用户.png);        
-           background-size: 1.5rem 1.5rem;  
+           background-size: 20px 20px;  
 		} 
 		#header{
-			height:3.5rem;
+			height:55px;
 			
 		}
 		#headerone{
 			float:left;
-			margin-top:0.9rem;
-			margin-left:0.7rem;
+			margin-top:13px;
+			margin-left:9px;
 		}
 		#headerone img{
-			height:1.5rem;
-			width:1.5rem;
+			height:23px;
+			width:23px;
 		}
 		#headertwo{
 			width:75%;
 		}
 		#headerthree{
 			float:right;
-			margin-top:-2.3rem;
-			margin-right:0.3rem;
+			margin-top:-38px;
+			margin-right:3px;
 		}
 		#headerthree img{
-			height:2rem;
-			width:2rem;
+			height:30px;
+			width:30px;
 		}
+		.list{
+			width:140px;
+			height:200px;
+			float:left;
+			list-style-type: none;
+			background-color: rgba(255,182,193,0.1);
+			margin-top:30px;
+			position: relative;
+		
+			margin-left:20px;
+		}
+		.list img{
+			width:140px;
+			height:130px;
+			float:left;
+		}
+		.list p{
+			font-size:13px;
+			margin-top:5px;
+		}
+		.list h3{
+			color:indianred;
+			margin-top:10px;
+		}#btn{
+	    	width: 70px; 
+	    	height:30px; 
+        	padding:8px;  
+        	background-color: orangered;  
+        	border-color: #357ebd;  
+        	color: #fff;  
+        	-moz-border-radius: 10px;  
+        	-webkit-border-radius: 10px;  
+        	border-radius: 10px; /* future proofing */   
+        	vertical-align: middle;  
+        	border: 1px solid transparent;  
+        	font-weight: 500;  
+        	font-size:15px;
+        	float:right;
+        	margin-top:-25px;
+        }
 		.wrapper{
-			height: 50px;
+			height: 0.5rem;
 			position: relative;
 			margin-bottom: 1rem;
 		}
@@ -71,33 +111,18 @@
 			position: absolute;
 		}
 		.wrapper li{
-			height: 50px;
+			height: 1.0rem;
 			float: left;
-			line-height: 50px;
-			padding: 0 20px;
+			line-height: 0.3rem;
+			padding: 0 1.0rem;
 		}
 		.cur{
-			border-bottom:3px solid pink;
+			border-bottom:0.2rem solid pink;
 			
 		}
-		.cur a{
+		.cur {
 			color:pink;
-			text-decoration: none;
-		}
-		
-		
-		
-		.one a{
-			color:black;
-			text-decoration: none;
-		}
-		.one a:hover{
-			color:pink;
-			text-decoration: none;
-		}
-		.one a:visited{
-			color:pink;
-			text-decoration: none;
+			
 		}
 		
 		ul li{
@@ -106,31 +131,34 @@
 			margin:1.1rem;		
 		}
 		ul li img{
-			height:10rem;
+			height:9rem;
 			width:9rem;			
 		}
 	</style>
 	<script src="js/jquery.1.11.3.min.js"></script>
 		<script src="js/iscroll.js"></script>
 		<script src="js/navbarscroll.js"></script>
+		
 	<body>
 		<div data-role="page" id="page" >
 			<div data-role="header" data-theme="f" id="header" data-position="fixed" >
 				<div id="headerone"><img src="img/扫一扫.png"></div>
-				<div id="headertwo"><input type="search" ></div>
+				<div id="headertwo"><input type="search" id="search"></div>
 				<div id="headerthree"><img src="img/二维码.png"></div>
 			</div>
 			<div id="content">
-				<div class="wrapper" id="wrap">
+				<div class="wrapper" id="wrap" >
 					<div class="scroller">
-						<ul>
-							<li class="cur"><a href="#">最新</a></li>
-							<li class="one"><a href="#">推荐</a></li>
-							<li class="one"><a href="#">生活</a></li>
-							<li class="one"><a href="#">鞋包</a></li>
-							<li class="one"><a href="#">爱美</a></li>
-							<li class="one"><a href="#">饰品</a></li>
-							<li class="one"><a href="#">服装</a></li>
+						<ul id="get">
+							<li class="cur">最新</li>
+							<li id="2">推荐</li>
+							<li id="3">生活</li>
+							<li id="4">鞋包</li>
+							<li id="5">爱美</li>
+							<li id="6">饰品</li>
+							<li>服装</li>
+							<li>化妆</li>
+							<li>零食</li>
 						</ul>	
 					</div>
 				</div>
@@ -139,8 +167,8 @@
 						$('.wrapper').navbarscroll();
 					})
 				</script>
-				<ul id="goodList">
-				</ul>
+				<div id="goodList">
+				</div>
 			</div>
 			<div data-role="footer" id="footer" data-position="fixed">
 				<div data-role="navbar">
@@ -156,24 +184,95 @@
 		</div>
 	</body>
 	<script>
-	$('document').ready(function(){
+	//搜索商品
+	$('#headertwo').on('click',function(){
+		var text = encodeURI($('#search').val());
+		console.log(text);
+		$.ajax({
+			type:'get',
+			url:'http://datainfo.duapp.com/shopdata/selectGoodes.php',
+			dataType:'jsonp',
+			data:{selectText:text},
+			success:function(data){
+				//console.log(data);
+				var str ='';
+				for(var i = 0; i < data.length; i++){
+					//console.log(data[i].goodsID);
+					str = str + '<div class="list"  goodsId = '+data[i].goodsID +'>'
+							  + '<img src = "'+data[i].goodsListImg + '"alt="">'
+							  + '<p>'+data[i].goodsName.slice(0,8)+'...'+'</p>'
+							  + '<h3>'+'￥'+data[i].price+'</h3>'
+							  + '<button id="btn">去购买</button>'
+							  + '</div>';
+				}
+				$('#goodList').html(str);
+				$('.list').on('click',function(){
+						window.location.href="goodsInfo.html#" + this.getAttribute('goodsId');
+					
+				})
+			
+			}
+		});
+	})
+	
+	//进行商品分类
+	$('#get > li').on('click',function(){
+		var classId = this.getAttribute('id');
+		console.log(classId);
 		$.ajax({
 			type:'get',
 			url:'http://datainfo.duapp.com/shopdata/getGoods.php',
-			dataType:'jsonp',		
+			dataType:'jsonp',
+			data:{classID:classId},
 			success:function(data){
+				console.log(data);
+				var str ='';
 				for(var i = 0; i < data.length; i++){
-					$('#goodList').html($('#goodList').html() + '<li goodsId = '+data[i].goodsId +'><img src = "'+data[i].goodsListImg + '"alt=""><p>'+data[i].goodsName.slice(0,8)+'...'+'</p></li>');
+					//console.log(data[i].goodsID);
+					str = str + '<div class="list"  goodsId = '+data[i].goodsID +'>'
+							  + '<img src = "'+data[i].goodsListImg + '"alt="">'
+							  + '<p>'+data[i].goodsName.slice(0,8)+'...'+'</p>'
+							  + '<h3>'+'￥'+data[i].price+'</h3>'
+							  + '<button id="btn">去购买</button>'
+							  + '</div>';
+				}
+				$('#goodList').html(str);
+				$('.list').on('click',function(){
+						window.location.href="goodsInfo.html#" + this.getAttribute('goodsId');
+					
+				})
+			
+			}
+		});
+	});
+	//热销商品页
+	
+		$.ajax({
+			type:'get',
+			url:'http://datainfo.duapp.com/shopdata/getGoods.php',
+			dataType:'jsonp',	
+			success:function(data){
+				console.log(data);
+				var str ='';
+				for(var i = 0; i < data.length; i++){
+					str = str + '<div class="list"  goodsId = '+data[i].goodsID +'>'
+							  + '<img src = "'+data[i].goodsListImg + '"alt="">'
+							  + '<p>'+data[i].goodsName.slice(0,8)+'...'+'</p>'
+							  + '<h3>'+'￥'+data[i].price+'</h3>'
+							  + '<button id="btn">去购买</button>'
+							  + '</div>';
 					
 				}
-				$('#goodList').on('click',function(){
-						window.location.href="goodsInfo.html#" + this.getAttribute('data[i].goodsId');
-					})
+				$('#goodList').html(str);
+				$('.list').on('click',function(){
+						window.location.href="goodsInfo.html#" + this.getAttribute('goodsId');
+					
+				})
+				
 			}
 			
 		})
-		
-	})
-		
+
+	
 	</script>
 </html>

@@ -11,11 +11,26 @@
 			margin:0 auto;
 			padding:0;
 		}
-		.text{width:80%;height:5rem; background-color:darkgray; opacity: 0.5;text-align: center;margin-top:10rem}
-		.text input{float:left;border:none;height:40px;line-height:30px;width:100%; text-indent:32px;}
+		.text{
+			width:80%;
+			height:100px;
+			 background-color:white; 
+			 opacity: 0.5;
+			 text-align: center;
+			 margin-top:150px;
+			 }
+		.text input{
+			float:left;
+			border:none;
+			height:50px;
+			line-height:30px;
+			width:100%; 
+			text-indent:32px;
+			font-size:18px;
+			}
  
 		body{
-			background-image:url(img/11.jpg);
+			background-image:url(img/18.jpg);
 			background-size: cover;
 		}
 		#btn{
@@ -23,15 +38,18 @@
     		border: none;
     		color: white;
     		width:80%;
-    		height:2rem;
-    		line-height:2rem;
+    		height:30px;
+    		line-height:30px;
     		text-align: center;
     		text-decoration: none;
-    		display: inline-block;
     		font-size: 16px;
-    		margin:0.6rem 2.3rem;
-    		cursor: pointer;
     		border-radius: 8px;
+    		margin-top:15px;
+    		/*display: inline-block;
+    		font-size: 16px;
+    		margin:10px 23px;
+    		cursor: pointer;
+    		border-radius: 8px;*/
 		}
 		#btn a{
 			color:white;
@@ -44,40 +62,40 @@
 		}
 		.missing{
 			float:left;
-			margin-top:0.2rem;
-			margin-left:2rem;
+			margin-top:4px;
+			margin-left:30px;
 		}
 		.sign{
 			float:right;
-			margin-top:0.2rem;
-			margin-right:2rem;
+			margin-top:4px;
+			margin-right:30px;
 		}
 		.missing a{
 			text-decoration: none;
 			color:white;
-			font-size:12px;
+			font-size:18px;
 		}
 		.sign a{
 			text-decoration: none;
 			color:white;
-			font-size:12px;
+			font-size:18px;
 		}
 	</style>
 	<body>
 		<img src="">
 		<div class="text">
-			<input type="text" placeholder="手机号">
-			<input type="password" placeholder="密码">
+			<input type="text" placeholder="昵称" id="qname">
+			<input type="password" placeholder="密码" id="qpassword">
 			
 		</div>
 		<div id="btn"><a href="#">登录</a></div>
 		<div class="missing"><a href="#">忘记密码</a></div>
-		<div class="sign"><a href="#">立即注册</a></div>
+		<div class="sign"><a href="sing-up.html">立即注册</a></div>
 	</body>
 	<script>
 		$('#btn').click(function(){
-//              var name=$('#qname').val();
-//              var pass=$('#qpassword').val();
+              var name=$('#qname').val();
+             var pass=$('#qpassword').val();
                 $.ajax({
                     type:'get',
                     url:' http://datainfo.duapp.com/shopdata/userinfo.php',
@@ -90,11 +108,14 @@
                         else if(data == 2){
                             alert('用户名与密码不符');
                         }
-                        else{                         
-                            window.location.href="goodslist.html";
-                        }          
-                    }
-                })
+                        else if(localStorage.getItem("username") == name){
+								window.location.href='index.html';
+						}else{
+							localStorage.setItem("username",name);
+							window.location.href='start.html';
+						}
+					}         
+                });
             })      
 	</script>
 </html>
