@@ -1,0 +1,69 @@
+[1212/172411:ERROR:proxy_service_factory.cc(105)] Cannot use V8 Proxy resolver in single process mode.
+[1212/172521:ERROR:renderer_main.cc(227)] Running without renderer sandbox
+[1212/172526:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[1212/172526:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[1212/172536:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[1212/172536:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[1212/172801:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[1212/172801:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[1212/173009:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[1212/173009:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[1212/173224:INFO:CONSOLE(111)] "null", source: http://127.0.0.1:8020/Homework/goodsInfo.html (111)
+[1212/173224:INFO:CONSOLE(117)] "0", source: http://127.0.0.1:8020/Homework/goodsInfo.html (117)
+[1212/184528:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[1212/184528:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[1212/184530:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[1212/184530:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[1212/184534:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[1212/184534:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[1212/184543:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[1212/184543:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[1212/184616:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[1212/184616:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[1212/185003:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[1212/185003:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[1212/192044:INFO:CONSOLE(195)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: http://127.0.0.1:8020/Homework/goodslist.html (195)
+[1212/192124:INFO:CONSOLE(195)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: http://127.0.0.1:8020/Homework/goodslist.html (195)
+[1212/192159:INFO:CONSOLE(195)] "Uncaught SyntaxError: Unexpected token ILLEGAL", source: http://127.0.0.1:8020/Homework/goodslist.html (195)
+[1212/200453:INFO:CONSOLE(229)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (229)
+[1212/200608:INFO:CONSOLE(229)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (229)
+[1212/200637:INFO:CONSOLE(229)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (229)
+[1212/200642:INFO:CONSOLE(229)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (229)
+[1212/200720:INFO:CONSOLE(229)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (229)
+[1212/200730:INFO:CONSOLE(229)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (229)
+[1212/200731:INFO:CONSOLE(166)] "", source: http://127.0.0.1:8020/Homework/goodslist.html (166)
+[1212/200732:INFO:CONSOLE(166)] "", source: http://127.0.0.1:8020/Homework/goodslist.html (166)
+[1212/201002:INFO:CONSOLE(229)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (229)
+[1212/201425:INFO:CONSOLE(229)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (229)
+[1212/201441:INFO:CONSOLE(232)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (232)
+[1212/201446:INFO:CONSOLE(232)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (232)
+[1212/201453:INFO:CONSOLE(232)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (232)
+[1212/201508:INFO:CONSOLE(232)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (232)
+[1212/201532:INFO:CONSOLE(232)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (232)
+[1212/201553:INFO:CONSOLE(233)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (233)
+[1212/201559:INFO:CONSOLE(233)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (233)
+[1212/201616:INFO:CONSOLE(233)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (233)
+[1212/201835:INFO:CONSOLE(233)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (233)
+[1212/201903:INFO:CONSOLE(236)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (236)
+[1212/201919:INFO:CONSOLE(237)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (237)
+[1212/202132:INFO:CONSOLE(237)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (237)
+[1212/202147:INFO:CONSOLE(237)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (237)
+[1212/202211:INFO:CONSOLE(237)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (237)
+[1212/202246:INFO:CONSOLE(238)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (238)
+[1212/202309:INFO:CONSOLE(238)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (238)
+[1212/202551:INFO:CONSOLE(238)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (238)
+[1212/202614:INFO:CONSOLE(238)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (238)
+[1212/202622:INFO:CONSOLE(252)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (252)
+[1212/202628:INFO:CONSOLE(252)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (252)
+[1212/202634:INFO:CONSOLE(252)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (252)
+[1212/202642:INFO:CONSOLE(252)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (252)
+[1212/202756:INFO:CONSOLE(253)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (253)
+[1212/202804:INFO:CONSOLE(253)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (253)
+[1212/202824:INFO:CONSOLE(253)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (253)
+[1212/202831:INFO:CONSOLE(253)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (253)
+[1212/202844:INFO:CONSOLE(254)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (254)
+[1212/202848:INFO:CONSOLE(254)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (254)
+[1212/202851:INFO:CONSOLE(254)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (254)
+[1212/202917:INFO:CONSOLE(254)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (254)
+[1212/202937:INFO:CONSOLE(254)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (254)
+[1212/203043:INFO:CONSOLE(255)] "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]", source: http://127.0.0.1:8020/Homework/goodslist.html (255)
