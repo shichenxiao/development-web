@@ -10,11 +10,11 @@
 	</head>
 	<style>
 		.ui-icon-one:after {  
-           background-image: url(img/首页.png);        
+           background-image: url(img/index.png);        
            background-size: 25px 25px;  
 		}
 		.ui-icon-four:after {  
-           background-image: url(img/购物车.png);        
+           background-image: url(img/car.png);        
            background-size:30px 30px;  
 		} 
 		#footer{
@@ -25,13 +25,7 @@
 			width:100%;
 			height:300px;
 		}
-		#two{
-			font-size:15px;
-		}
-		#three{
-			font-size:20px;
-			color:orangered;
-		}
+		
 		#footer ul li a{
 			height:10px;
 		}
@@ -49,12 +43,7 @@
         	font-size:15px;
         	line-height:25px;
 		}
-		/*#add a{
-			background-color: orangered;
-			color:white;
-			height:0.7rem;!important
-			font-weight:100;
-		}*/
+		
 		#buy{
 			width: 25%;  
 			height:50px;
@@ -69,18 +58,28 @@
         	font-size:15px;
         	line-height:25px;
 		}
+		h4{
+			font-size:15px;
+			font-weight:500;
+		}
+		h2{
+			color:orangered;
+		}
+		p{
+			font-size:12px;
+			border-top:1px solid darkgray;
+			padding-top:20px;
+		}
 	</style>
 	<body>
 		<div  id="content">
 			<div id="one"></div>
-			<p id="two"></p>
-			<p id="three"></p>
 		<div>
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar" id="footer"> 
       			<ul>
-      				<li><a href="index.html" id="shou" class="ui-btn ui-btn-icon-top ui-icon-one  ui-nodisc-icon">首页</a></li>
-					<li><a href="shoppinglist.html" id="gou" class="ui-btn ui-btn-icon-top ui-icon-four  ui-nodisc-icon">购物车</a></li>
+      				<li id="button1"><a href="index.html" id="shou" class="ui-btn ui-btn-icon-top ui-icon-one  ui-nodisc-icon">首页</a></li>
+					<li id="button4"><a href="shoppinglist.html" id="gou" class="ui-btn ui-btn-icon-top ui-icon-four  ui-nodisc-icon">购物车</a></li>
         			<li id="add">加入购物车</li>
         			<li id="buy">立即购买</li>
         			
@@ -105,7 +104,9 @@
 					var str = '';
 					str = str + '<img src = "'+data[0].goodsListImg + '"alt="">'
 							  + '<h4>'+data[0].goodsName+'</h4>'
-				
+							  + '<h2>'+'￥'+data[0].price+'</h2>'
+							  + '<p>'+data[0].detail+'</p>'
+					$('#one').html(str);
 			}
 		});		
 		//加入购物车
@@ -127,6 +128,12 @@
 				}
 			});
 		})
-		
+		$('#button1').click(function(){
+			window.location.href="index.html";
+		})
+
+		$('#button4').click(function(){
+			window.location.href="shoppinglist.html";
+		})
 	</script>
 </html>

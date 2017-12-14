@@ -8,154 +8,30 @@
     	<script src="js/jquery-2.2.2.js"></script>
     	<script src="js/jquery.mobile-1.4.5.min.js"></script>
     	<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    	<link  rel="stylesheet" href="css/goodslist.css">
 	</head>
-	<style>
-	*{
-			margin:0 auto;
-			padding:0;
-		}
-		.ui-bar-f{
-			background-color: white;
-		}
-		.ui-icon-one:after {  
-           background-image: url(img/首页.png);        
-           background-size: 20px 20px;  
-		}  
-		.ui-icon-two:after {  
-           background-image: url(img/单品.png);        
-           background-size: 20px 20px;
-		} 
-		.ui-icon-three:after {  
-           background-image: url(img/礼物盒.png);        
-           background-size: 20px 20px;  
-		} 
-		.ui-icon-four:after {  
-           background-image: url(img/购物车.png);        
-           background-size: 20px 20px;
-		} 
-		.ui-icon-five:after {  
-           background-image: url(img/用户.png);        
-           background-size: 20px 20px;  
-		} 
-		#header{
-			height:55px;
-			
-		}
-		#headerone{
-			float:left;
-			margin-top:13px;
-			margin-left:9px;
-		}
-		#headerone img{
-			height:23px;
-			width:23px;
-		}
-		#headertwo{
-			width:75%;
-		}
-		#headerthree{
-			float:right;
-			margin-top:-38px;
-			margin-right:3px;
-		}
-		#headerthree img{
-			height:30px;
-			width:30px;
-		}
-		.list{
-			width:140px;
-			height:200px;
-			float:left;
-			list-style-type: none;
-			background-color: rgba(255,182,193,0.1);
-			margin-top:30px;
-			position: relative;
-		
-			margin-left:20px;
-		}
-		.list img{
-			width:140px;
-			height:130px;
-			float:left;
-		}
-		.list p{
-			font-size:13px;
-			margin-top:5px;
-		}
-		.list h3{
-			color:indianred;
-			margin-top:10px;
-		}#btn{
-	    	width: 70px; 
-	    	height:30px; 
-        	padding:8px;  
-        	background-color: orangered;  
-        	border-color: #357ebd;  
-        	color: #fff;  
-        	-moz-border-radius: 10px;  
-        	-webkit-border-radius: 10px;  
-        	border-radius: 10px; /* future proofing */   
-        	vertical-align: middle;  
-        	border: 1px solid transparent;  
-        	font-weight: 500;  
-        	font-size:15px;
-        	float:right;
-        	margin-top:-25px;
-        }
-		.wrapper{
-			height: 0.5rem;
-			position: relative;
-			margin-bottom: 1rem;
-		}
-		.wrapper .scroller{
-			position: absolute;
-		}
-		.wrapper li{
-			height: 1.0rem;
-			float: left;
-			line-height: 0.3rem;
-			padding: 0 1.0rem;
-		}
-		.cur{
-			border-bottom:0.2rem solid pink;
-			
-		}
-		.cur {
-			color:pink;
-			
-		}
-		
-		ul li{
-			list-style: none;
-			float:left;	
-			margin:1.1rem;		
-		}
-		ul li img{
-			height:9rem;
-			width:9rem;			
-		}
-	</style>
+
 	<script src="js/jquery.1.11.3.min.js"></script>
 		<script src="js/iscroll.js"></script>
 		<script src="js/navbarscroll.js"></script>
-		
+		<script src="js/button.js"></script>
 	<body>
 		<div data-role="page" id="page" >
 			<div data-role="header" data-theme="f" id="header" data-position="fixed" >
-				<div id="headerone"><img src="img/扫一扫.png"></div>
+				<div id="headerone"><img src="img/sao.png"></div>
 				<div id="headertwo"><input type="search" id="search"></div>
-				<div id="headerthree"><img src="img/二维码.png"></div>
+				<div id="headerthree"><img src="img/wei.png"></div>
 			</div>
 			<div id="content">
 				<div class="wrapper" id="wrap" >
 					<div class="scroller">
 						<ul id="get">
 							<li class="cur">最新</li>
-							<li id="2">推荐</li>
-							<li id="3">生活</li>
-							<li id="4">鞋包</li>
-							<li id="5">爱美</li>
-							<li id="6">饰品</li>
+							<li id="2">衬衫</li>
+							<li id="3">礼服</li>
+							<li id="4">棉服</li>
+							<li id="5">短外套</li>
+							<li id="6">卫衣</li>
 							<li>服装</li>
 							<li>化妆</li>
 							<li>零食</li>
@@ -173,17 +49,18 @@
 			<div data-role="footer" id="footer" data-position="fixed">
 				<div data-role="navbar">
       				<ul>
-        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-one  ui-nodisc-icon">首页</a></li>
-        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-two  ui-nodisc-icon">单品</a></li>
-        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-three  ui-nodisc-icon">挑礼</a></li>
-        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-four  ui-nodisc-icon">购物车</a></li>
-        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-five  ui-nodisc-icon">我的</a></li>
+        				<li id="button1"><a href="#" class="ui-btn ui-btn-icon-top ui-icon-one  ui-nodisc-icon">首页</a></li>
+        				<li id="button2"><a href="#" class="ui-btn ui-btn-icon-top ui-icon-two  ui-nodisc-icon">单品</a></li>
+        				<li id="button3"><a href="#" class="ui-btn ui-btn-icon-top ui-icon-three  ui-nodisc-icon">挑礼</a></li>
+        				<li id="button4"><a href="#" class="ui-btn ui-btn-icon-top ui-icon-four  ui-nodisc-icon">购物车</a></li>
+        				<li id="button5"><a href="#" class="ui-btn ui-btn-icon-top ui-icon-five  ui-nodisc-icon">我的</a></li>
       				</ul>
     			</div>
 			</div>
 		</div>
 	</body>
 	<script>
+	
 	//搜索商品
 	$('#headertwo').on('click',function(){
 		var text = encodeURI($('#search').val());
@@ -218,14 +95,14 @@
 	//进行商品分类
 	$('#get > li').on('click',function(){
 		var classId = this.getAttribute('id');
-		console.log(classId);
+		//console.log(classId);
 		$.ajax({
 			type:'get',
 			url:'http://datainfo.duapp.com/shopdata/getGoods.php',
 			dataType:'jsonp',
 			data:{classID:classId},
 			success:function(data){
-				console.log(data);
+				//console.log(data);
 				var str ='';
 				for(var i = 0; i < data.length; i++){
 					//console.log(data[i].goodsID);
@@ -252,7 +129,7 @@
 			url:'http://datainfo.duapp.com/shopdata/getGoods.php',
 			dataType:'jsonp',	
 			success:function(data){
-				console.log(data);
+				//console.log(data);
 				var str ='';
 				for(var i = 0; i < data.length; i++){
 					str = str + '<div class="list"  goodsId = '+data[i].goodsID +'>'
@@ -273,6 +150,17 @@
 			
 		})
 
-	
+		$('#button1').click(function(){
+				window.location.href="index.html";
+			})
+		$('#button2').click(function(){
+			window.location.href="goodslist.html";
+		})
+		$('#button4').click(function(){
+			window.location.href="shoppinglist.html";
+		})
+		$('#button5').click(function(){
+			window.location.href="myself.html";
+		})
 	</script>
 </html>

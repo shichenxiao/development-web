@@ -19,18 +19,18 @@
 	    }
 	    #btn{
 	    	width: 200px;  
-        	padding:8px;  
-        	background-color: orange;  
-        	border-color: #357ebd;  
-        	color: #fff;  
+        	padding:8px;    
+        	color: #fff;
+        	background:none;
+        	border-color:white;
         	-moz-border-radius: 10px;  
         	-webkit-border-radius: 10px;  
         	border-radius: 10px; /* future proofing */  
         	text-align: center;  
         	vertical-align: middle;  
-        	border: 1px solid transparent;  
-        	font-weight: 900;  
-        	font-size:125%;
+        	border: 3px solid;  
+        	font-weight: 100;  
+        	font-size:100%;
         	position: absolute;
         	top:50%;
         	left:25%;
@@ -40,10 +40,10 @@
 	<body>
 		<div class="swiper-container">
     		<div class="swiper-wrapper">
-        		<div class="swiper-slide"><img src="img/13.jpg"></div>
-        		<div class="swiper-slide"><img src="img/12.jpg"></div>
-        		<div class="swiper-slide"><img src="img/10.jpg"></div>
-        		<div class="swiper-slide"><img src="img/6.jpg"><button id="btn">立即购</button> </div>
+        		<div class="swiper-slide"><img src="img/19.jpg"></div>
+        		<div class="swiper-slide"><img src="img/10(2).jpg"></div>
+        		<div class="swiper-slide"><img src="img/12(2).jpg"></div>
+        		<div class="swiper-slide"><img src="img/6(1).jpg"><button id="btn">立即开启</button> </div>
         		
     		</div>
     		
@@ -56,17 +56,18 @@
 	
 	<script>     
 //		if(localStorage.getItem('login')){
-//			window.location.href="goodslist.html";
+//			window.location.href="index.html";
 //		}
-//		localStorage.setItem('login','true');
+		localStorage.setItem('login','true');
 		//console.log(getItem('login'));
   		var mySwiper = new Swiper ('.swiper-container', {
     		//direction: 'vertical',
-    		loop: true,//循环   
+    		//loop: true,//循环   
     		autoplayDisableOnInteraction : false
   		})  
   		$("#btn").click(function(){
-  			window.location.href="sign-in.html";
+  			localStorage.setItem('login',true);
+  			window.location.href="index.html";
   		})
   	</script>
 </html>

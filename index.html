@@ -8,112 +8,11 @@
     	<script src="js/jquery-2.2.2.js"></script>
     	<script src="js/jquery.mobile-1.4.5.min.js"></script>
     	<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    	<link rel ="stylesheet" href="css/index.css">
 	</head>
 	<style>
-		*{
-			margin:0 auto;
-			padding:0;
-		}
-		.ui-bar-f{
-			background-color: white;
-		}
-		.ui-icon-one:after {  
-           background-image: url(img/首页.png);        
-           background-size: 20px 20px;  
-		}  
-		.ui-icon-two:after {  
-           background-image: url(img/单品.png);        
-           background-size: 20px 20px;
-		} 
-		.ui-icon-three:after {  
-           background-image: url(img/礼物盒.png);        
-           background-size: 20px 20px;  
-		} 
-		.ui-icon-four:after {  
-           background-image: url(img/购物车.png);        
-           background-size: 20px 20px;
-		} 
-		.ui-icon-five:after {  
-           background-image: url(img/用户.png);        
-           background-size: 20px 20px;  
-		} 
-		#header{
-			height:55px;
-			
-		}
-		#headerone{
-			float:left;
-			margin-top:13px;
-			margin-left:9px;
-		}
-		#headerone img{
-			height:23px;
-			width:23px;
-		}
-		#headertwo{
-			width:75%;
-		}
-		#headerthree{
-			float:right;
-			margin-top:-38px;
-			margin-right:3px;
-		}
-		#headerthree img{
-			height:30px;
-			width:30px;
-		}
-		.list{
-			width:140px;
-			height:220px;
-			float:left;
-			list-style-type: none;
-			background-color: rgba(255,182,193,0.1);
-			margin-top:30px;
-			position: relative;
 		
-			margin-left:20px;
-		}
-		.list img{
-			width:140px;
-			height:130px;
-			float:left;
-		}
-		.swiper-slide img{
-			width:100%;
-			height:100px;
-		}
-		ul,li{
-			list-style: none;
-			color:black;
-		}
-		ul li a{
-			text-decoration: none;
-			color:black;
-		}
-		.wrapper{
-			height: 50px;
-			position: relative;
-		}
-		.wrapper .scroller{
-			position: absolute;
-		}
-		.wrapper li{
-			height: 50px;
-			float: left;
-			line-height: 50px;
-			padding: 0 20px;
-		}
-		.cur{
-			border-bottom:3px solid pink;
-			
-		}
-		.cur{
-			color:pink;
-		}
-		#image img{
-			width:100%;
-			height:120px;
-		}
+		
 	</style>
 		<script src="js/jquery.1.11.3.min.js"></script>
 		<script src="js/iscroll.js"></script>
@@ -121,9 +20,9 @@
 	<body>
 		<div data-role="page" id="page" >
 			<div data-role="header" data-theme="f" id="header" data-position="fixed" >
-				<div id="headerone"><img src="img/扫一扫.png"></div>
+				<div id="headerone"><img src="img/sao.png"></div>
 				<div id="headertwo"><input type="search" id="search"></div>
-				<div id="headerthree"><img src="img/二维码.png"></div>
+				<div id="headerthree"><img src="img/wei.png"></div>
 			</div>
 			<div id="content">
 				<div id="banner">
@@ -165,11 +64,11 @@
 			<div data-role="footer" id="footer" data-position="fixed">
 				<div data-role="navbar">
       				<ul>
-        				<li><a href="index.html" class="ui-btn ui-btn-icon-top ui-icon-one  ui-nodisc-icon">首页</a></li>
-        				<li><a href="goodslist.html" class="ui-btn ui-btn-icon-top ui-icon-two  ui-nodisc-icon">单品</a></li>
-        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-three  ui-nodisc-icon">挑礼</a></li>
-        				<li><a href="shoppinglist.html" class="ui-btn ui-btn-icon-top ui-icon-four  ui-nodisc-icon">购物车</a></li>
-        				<li><a href="myself.html" class="ui-btn ui-btn-icon-top ui-icon-five  ui-nodisc-icon">我的</a></li>
+        				<li id="button1"><a href="#" class="ui-btn ui-btn-icon-top ui-icon-one  ui-nodisc-icon">首页</a></li>
+        				<li id="button2" ><a href="#" class="ui-btn ui-btn-icon-top ui-icon-two  ui-nodisc-icon">单品</a></li>
+        				<li id="button3"><a href="#" class="ui-btn ui-btn-icon-top ui-icon-three  ui-nodisc-icon">挑礼</a></li>
+        				<li id="button4"><a href="#" class="ui-btn ui-btn-icon-top ui-icon-four  ui-nodisc-icon">购物车</a></li>
+        				<li id="button5"><a href="#" class="ui-btn ui-btn-icon-top ui-icon-five  ui-nodisc-icon">我的</a></li>
       				</ul>
     			</div>
 			</div>
@@ -178,6 +77,9 @@
 
 	<script src="js/swiper-3.4.2.min.js"></script>
 	<script> 
+		if(!localStorage.getItem('login')){
+			window.location.href="start.html";
+		}
 		var mySwiper = new Swiper ('.swiper-container',{
     		//direction: 'vertical',
     		loop: true,//循环   
@@ -213,7 +115,18 @@
 			}
 		});
 	})
-	
+	$('#button1').click(function(){
+	window.location.href="index.html";
+})
+$('#button2').click(function(){
+	window.location.href="goodslist.html";
+})
+$('#button4').click(function(){
+	window.location.href="shoppinglist.html";
+})
+$('#button5').click(function(){
+	window.location.href="myself.html";
+})
   		
   	</script>
 </html>

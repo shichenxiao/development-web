@@ -62,6 +62,13 @@
 			height:20px;
 			width:20px;
 		}
+		#login{
+			color:white;
+			font-size:12px;
+			font-weight:900;
+			float:right;
+			margin-right:45px;
+		}
 	</style>
 	<body>
         <div id="one" >
@@ -73,7 +80,8 @@
         </div>                      
          <div id="two">
             	<a href="#pageone" id="btn">注册</a>          
-        </div>      
+        </div>    
+        <div id="login">登录已有账号>></div>
 	</body>
 	<script>
 	 $('#btn').click(function(){
@@ -127,5 +135,8 @@
             $("#rightthree").html('<img src="img/right.png">');  
         }  
      });  
+     $('#login').click(function(){
+     	window.location.href="sign-in.html";
+     })
 	</script>
 </html>
