@@ -104,15 +104,23 @@
 					t++;
 					$(this).prev().html(t);
 					TotalPrice();
-			
-					var goodsId = this.getAttribute('goodsId');
+					var goodsId = this.getAttribute('goodsId');			
+//					console.log(goodsId);
+//					for(var i = 0;i<data.length;i++){
+//						var price1 = data[i].price; 
+//					}					
+//					var num1 = parseInt($(this).parents(".shop-info").find(".num").text()); //得到商品的数量     				
+//        			var total1 = num1*price1;	
+//					
+//					$('.price').html(total1);
+//					var goodsId = this.getAttribute('goodsId');
 					$.ajax({
 						type:'get',
 						url:'http://datainfo.duapp.com/shopdata/updatecar.php',
 						dataType:'jsonp',
 						data:{'userID':username,'goodsID':goodsId,'number':t},
 						success:function(data){
-							console.log(data);
+							//console.log(data);
 						}
 					});
 				});
@@ -166,7 +174,7 @@
           		console.log(num);
           		var price = parseInt($(this).parents(".shop-info").find(".price").text()); //得到商品的单价
           		var total = price * num; //计算单个商品的总价
-          		$(".shopprices").html(total);
+          		$(".shop-prices").html(total);
        			allprice += total;
        			
         		}
