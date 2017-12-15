@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>设置</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    	<link rel="stylesheet" href="css/setting.css">
+    	<script src="js/jquery-2.2.2.js"></script>
+    	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+    	
+	</head>
+	
+	<body>
+		  <div id="touxiang"><a href="#" id="user"></a><span><img src="img/tou3.jpg"></span></div>
+		<div id="list">
+				<ul data-role="listview" data-inset="true">
+					
+                	<li><a href="#"><img src="img/qr5.png" class="ui-li-icon" />我的二维码</a></li>
+                	<li><a href="#"><img src="img/sms.png" class="ui-li-icon" />建议反馈</a></li>
+                	<li><a href="#"><img src="img/vip.png" class="ui-li-icon" />会员特权</a></li>
+                	<li><a href="#"><img src="img/Support.png" class="ui-li-icon" />我的客服</a></li>	
+				</ul>
+			</div>
+		<div id="btn1"><a href="#" class="ui-btn">退出登录</a></div>
+		<div id="btn2"><a href="#" class="ui-btn">返回</a></div>
+	</body>
+	<script>
+		var use= localStorage.getItem('username');
+		$('#user').html(use);
+		$('#btn1').click(function(){
+			localStorage.removeItem('username');
+			$('#user').html('请登录');			
+		})
+		if(!localStorage.getItem('username')){
+			$('#user').click(function(){
+				window.location.href="sign-in.html";
+			})			
+		}
+		$('#btn2').click(function(){
+			window.location.href="myself.html";
+		})
+	</script>
+</html>
