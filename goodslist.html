@@ -27,11 +27,11 @@
 					<div class="scroller">
 						<ul id="get">
 							<li class="cur">最新</li>
-							<li id="2">衬衫</li>
-							<li id="3">礼服</li>
-							<li id="4">棉服</li>
-							<li id="5">短外套</li>
-							<li id="6">卫衣</li>
+							<li id="2">礼服</li>
+							<li id="3">棉服</li>
+							<li id="4">短外套</li>
+							<li id="5">卫衣</li>
+							<li id="6">T恤</li>
 							<li>服装</li>
 							<li>化妆</li>
 							<li>零食</li>
@@ -102,7 +102,7 @@
 			dataType:'jsonp',
 			data:{classID:classId},
 			success:function(data){
-				//console.log(data);
+				console.log(data);
 				var str ='';
 				for(var i = 0; i < data.length; i++){
 					//console.log(data[i].goodsID);
