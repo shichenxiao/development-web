@@ -1,0 +1,124 @@
+*{
+			margin:0 auto;
+			padding:0;
+		}
+		.ui-bar-f{
+			background-color: white;
+		}
+		.ui-icon-one:after {  
+           background-image: url("../img/index.png");        
+           background-size: 20px 20px;  
+		}  
+		.ui-icon-two:after {  
+           background-image: url("../img/danpin.png");        
+           background-size: 20px 20px;
+		} 
+		.ui-icon-three:after {  
+           background-image: url("../img/gift.png");        
+           background-size: 20px 20px;  
+		} 
+		.ui-icon-four:after {  
+           background-image: url("../img/car.png");        
+           background-size: 20px 20px;
+		} 
+		.ui-icon-five:after {  
+           background-image: url("../img/usr.png");        
+           background-size: 20px 20px;  
+		} 
+		#header{
+			height:55px;
+			
+		}
+		#headerone{
+			float:left;
+			margin-top:13px;
+			margin-left:9px;
+		}
+		#headerone img{
+			height:23px;
+			width:23px;
+		}
+		#headertwo{
+			width:75%;
+		}
+		#headerthree{
+			float:right;
+			margin-top:-38px;
+			margin-right:3px;
+		}
+		#headerthree img{
+			height:30px;
+			width:30px;
+		}
+		.list{
+			width:140px;
+			height:200px;
+			float:left;
+			list-style-type: none;
+			background-color: rgba(255,182,193,0.1);
+			margin-top:30px;
+			position: relative;
+		
+			margin-left:25px;
+		}
+		.list img{
+			width:140px;
+			height:130px;
+			float:left;
+		}
+		.list p{
+			font-size:13px;
+			margin-top:5px;
+		}
+		.list h3{
+			color:indianred;
+			margin-top:10px;
+		}#btn{
+	    	width: 70px; 
+	    	height:30px; 
+        	padding:8px;  
+        	background-color: orangered;  
+        	border-color: #357ebd;  
+        	color: #fff;  
+        	-moz-border-radius: 10px;  
+        	-webkit-border-radius: 10px;  
+        	border-radius: 10px; /* future proofing */   
+        	vertical-align: middle;  
+        	border: 1px solid transparent;  
+        	font-weight: 500;  
+        	font-size:15px;
+        	float:right;
+        	margin-top:-25px;
+        }
+		.wrapper{
+			height: 0.5rem;
+			position: relative;
+			margin-bottom: 1rem;
+		}
+		.wrapper .scroller{
+			position: absolute;
+		}
+		.wrapper li{
+			height: 1.0rem;
+			float: left;
+			line-height: 0.3rem;
+			padding: 0 1.0rem;
+		}
+		.cur{
+			border-bottom:0.2rem solid pink;
+			
+		}
+		.cur {
+			color:pink;
+			
+		}
+		
+		ul li{
+			list-style: none;
+			float:left;	
+			margin:1.1rem;		
+		}
+		ul li img{
+			height:9rem;
+			width:9rem;			
+		}

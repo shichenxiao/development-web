@@ -1,0 +1,339 @@
+*{
+			margin:0 auto;
+			padding:0;
+		}
+		.ui-bar-f{
+			background-color: white;
+		}
+		.header{
+			position:relative;
+			width:100%;
+			height:44px;
+			background:#fff;
+			border-bottom:1px solid #e0e0e0;
+		}
+		.header h1{
+			font-size:16px;
+			color:#333;
+			height:44px;
+			line-height:44px;
+			display:block;
+			text-align:center;
+			}
+		.header a{
+			position: absolute;
+			top:0;
+			display:block;
+			height:44px;
+			line-height:44px;
+			}
+		.header a.back{
+			left:0px;
+			}
+		.header a.back span{
+			display:inline-block;
+			width:25px;
+			height:25px;
+			margin:10px 5px;
+			background: url("../img/icon-back.png") no-repeat;
+			background-size:100%;
+			}
+		.header .home{}
+		
+		.ui-icon-one:after {  
+           background-image: url(img/首页.png);        
+           background-size: 25px 25px;  
+		}  
+		.ui-icon-two:after {  
+           background-image: url(img/单品.png);        
+           background-size: 25px 25px;  
+		} 
+		.ui-icon-three:after {  
+           background-image: url(img/礼物盒.png);        
+           background-size: 25px 25px;  
+		} 
+		.ui-icon-four:after {  
+           background-image: url(img/购物车.png);        
+           background-size: 25px 25px;  
+		} 
+		.ui-icon-five:after {  
+           background-image: url(img/用户.png);        
+           background-size: 20px 20px;  
+		} 
+		
+		#all{
+			float:left;
+		
+		}
+		#suan{
+			float:right;
+			margin-right10px;
+			margin-top:-45px;
+			background-color: orangered;
+			color:white;
+			font-weight: 200;
+		}
+		.shop-info{
+			background:#f5f5f5;
+			height:120px;
+			padding:0 0px;
+			position:relative;
+		}
+		.shop-info .checkbox{
+			background:url("../img/icon_radio3.png") no-repeat left center;
+			background-size:20px 20px;
+			position:absolute;
+			top:50%;
+			left:15px;
+			margin-top:-60px;
+			width:20px;
+			height:120px;
+			}
+		.shop-info .checkbox1{
+			background:url("../img/icon_radio4.png") no-repeat left center;
+			background-size:20px 20px;
+			position:absolute;
+			top:50%;
+			left:15px;
+			margin-top:-60px;
+			width:20px;
+			height:120px;
+			}
+		.shop-info-img{
+			position:absolute;
+			top:15px;
+			left:45px;
+			width:90px;
+			height:90px;
+			}
+		.shop-info-img img{
+			width:100%;
+			height:100%;
+		}
+		.shop-info-text{
+			margin-left:140px;
+			padding:15px 0;
+		}
+		.shop-info-text h4{
+			font-size:14px;
+			display:-webkit-box;
+			
+			overflow: hidden;
+		}
+		.shop-brief{
+			height:25px;
+			line-height:25px;
+			font-size:12px;
+			color:#81838e;
+			white-space:nowrap;
+		}
+		.shop-brief span{
+			display:inline-block;
+			margin-right:8px;
+		}
+		.shop-price{
+			height:24px;
+			line-height:24px;
+			position:relative;
+			margin-top:10px;
+		}
+		 .shop-price .shop-pices {
+		 	color:red;
+		 	font-size:16px;
+		 }
+		.shop-arithmetic{
+			right:0px;
+			top:0;
+			width:57px;
+			box-sizing:border-box;
+			white-space:nowrap;
+			height:100%;
+			border:1px solid #e0e0e0;
+		}
+	
+		.shop-arithmetic .minus{
+			border:1px solid #e0e0e0;
+			width:15px;
+			float:left;
+		}
+ 		.shop-arithmetic .failed{
+ 			color:#d1d1d1;
+ 		}
+		.shop-arithmetic .plus{
+			border:1px solid #e0e0e0;
+			width:15px;
+			float:left;
+		}
+		.shop-arithmetic .num{
+			
+			width:32px;
+			text-align:center;
+			border:none;
+			display: inline-block;
+			height:100%;
+			box-sizing:border-box;
+			vertical-align:top;
+			margin:0 -6px;
+			float:left;
+		}
+		.shopPrice{
+			background:#fff;
+			height:35px;
+			line-height:35px;
+			padding:0 15px;
+			text-align:right;
+		}
+		.shopPrice span{
+			color:#f00;
+		}
+		input[type="checkbox"]{
+			-webkit-appearance:none;
+			outline: none;
+		}
+		input.check{
+			background:url("../img/icon_radio3.png") no-repeat center left;
+			background-size:20px 20px;
+			position:absolute;
+			top:50%;
+			left:10px;
+			margin-top:-18px;
+			width:20px;
+			height:35px;
+		}
+		input.check:checked{
+			background:url("../img/icon_radio4.png") no-repeat center left;
+			background-size:20px 20px;
+		}
+		input.goodsCheck:checked{
+			background:url("../img/icon_radio4.png") no-repeat center left;
+			background-size:20px 20px;
+		}
+		input.check:checked{
+			background:url("../img/icon_radio4.png") no-repeat center left;
+			background-size:20px 20px;
+		}
+		.checked{
+			background:url("../img/icon_radio4.png") no-repeat left center;
+			background-size:20px 20px;
+			position:absolute;
+			top:50%;
+			left:15px;
+			margin-top:-18px;
+			width:20px;
+			height:35px;
+		}
+		ul li{
+			list-style-type: none;
+		}
+		.payment-bar{
+			clear:both;
+			overflow:hidden;
+			width:100%;
+			height:49px;
+			position:fixed;
+			bottom:0;
+			border-top:1px solid #e0e0e0;
+			background:#FFFFFF;
+		}
+		
+		.all-checkbox{
+			float:left;
+			margin-top:10px;
+			padding-left:40px;
+		}
+		#AllCheck{
+			float:left;
+			
+		}
+		#xuan{
+			margin-left:30px;
+			margin-top:-10px;
+		}
+		.payment-bar .shop-total{
+			float:left;
+			-webkit-box-flex:1.0;
+			box-flex:1.0;
+			margin:9px 20px 9px 35px;
+		}
+		.payment-bar .shop-total span{
+			display:block;
+			font-size:12px;
+		}
+		.payment-bar .settlement{
+			display:inline-block;
+			float:right;
+			width:100px;
+			height:49px;
+			line-height:49px;
+			text-align:center;
+			color:#FFFFFF;
+			font-size:16px;
+			background:#f23030;
+		}
+		.payment-bar a{
+			text-decoration: none;
+			
+		}
+		.payment-bar .shop-total strong{
+			display:block;font-size:16px;
+		}
+		
+		.delete img{
+			height:40px;
+			width:40px;
+			float:right;
+			margin-top:-30px;
+			margin-right:5px;
+		}
+		.jd_win{
+    		width: 100%;
+    		height: 100%;
+    		position: fixed;
+    		top:0;
+    		left:0;
+   	 		background: rgba(0, 0, 0, 0.6);
+    		z-index: 9999;
+    		display:none;
+
+		}
+		.jd_win_box{
+    		width: 80%;
+    		padding: 0 20px;
+    		border-radius: 4px;
+    		background-color: #fff;
+    		position: absolute;
+    		top:50%;
+    		left:50%;
+    		transform:translate(-50%, -50%);
+    		-webkit-transform:translate(-50%, -50%);
+		}
+
+		.jd_win .jd_win_tit{
+    		border-bottom:1px solid #ccc;
+    		line-height: 75px;
+    		text-align: center;
+    		font-size: 18px;
+		}
+		.jd_btn{
+    		width: 100%;
+    		padding: 20px 0;
+		}
+
+		
+		#cancle{
+			float:left;
+    		margin-right: 10%;
+    		border: 1px solid #ccc;
+    		color:black;
+    		height:25px;
+    		width:90px;
+    		text-align: center;
+		}
+		#submit{
+			float:right;
+    		background: #d8505c;
+    		color: #fff;
+    		height:25px;
+    		width:90px;
+    	
+		}

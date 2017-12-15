@@ -1,0 +1,50 @@
+*{
+			margin:0 auto;
+			padding:0;
+		}
+	 	#touxiang a{
+	 		line-height: 60px;
+	 		text-decoration: none;
+	 		color:black;
+	 		margin-left:10px;
+	 		font-size:20px;
+	 	}
+		#touxiang img{
+			height:70px;
+			width:70px;
+			margin-top:10px;
+			margin-right:10px;
+		}
+		span{
+			float:right;
+		
+		}
+		#touxiang{
+			height:90px;
+		}
+		#btn1{
+			margin-top:30px;
+			width:75%;
+			text-align: center;
+	
+		}
+		#btn1 a{
+			border-radius: 14px;
+			background-color: orangered;
+			color:white;
+			font-weight: 100;
+			
+		}
+		#btn2{
+			margin-top:30px;
+			width:75%;
+			text-align: center;
+	
+		}
+		#btn2 a{
+			border-radius: 14px;
+			background-color: orangered;
+			color:white;
+			font-weight: 100;
+			
+		}

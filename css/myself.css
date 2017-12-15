@@ -1,0 +1,64 @@
+*{
+			margin:0 auto;
+			padding:0;
+		}
+		.ui-bar-f{
+			background-color: white;
+		}
+		.ui-icon-one:after {  
+           background-image: url("../img/index.png");        
+           background-size: 20px 20px;  
+		}  
+		.ui-icon-two:after {  
+           background-image: url("../img/danpin.png");        
+           background-size: 20px 20px;
+		} 
+		.ui-icon-three:after {  
+           background-image: url("../img/gift.png");        
+           background-size: 20px 20px;  
+		} 
+		.ui-icon-four:after {  
+           background-image: url("../img/car.png");        
+           background-size: 20px 20px;
+		} 
+		.ui-icon-five:after {  
+           background-image: url("../img/usr.png");        
+           background-size: 20px 20px;  
+		} 
+		#image{
+			background-color:pink;
+			height:230px;
+			width:100%;
+			
+		}
+		#content{
+			text-align: center;
+		
+		}
+		#content h5{
+			color:white;
+		}
+		#content p{
+			color:white;
+		}
+		#setting{
+			float:right;
+		}
+		#setting img{
+			height:25px;
+			width:25px;
+			margin-top:10px;
+			margin-right:10px;
+		}
+		#touxiang img{
+			height:100px;
+			width:100px;
+			line-height:230px;
+			margin-top:50px;
+			border-radius:100%;
+			margin-left:45px;
+		}
+		#icon img{
+			height:30px;
+			width:30px;
+		}
