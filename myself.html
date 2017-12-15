@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>我的</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    	<link rel="stylesheet" href="css/myself.css">
+    	<script src="js/jquery-2.2.2.js"></script>
+    	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+    	<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    	
+	</head>
+	<body>
+			<div id="content">
+				<div id="image">
+					<div id="setting"><a href="setting.html" ><img src="img/setting.png"></a></div>
+					<div id="touxiang"><a href="setting.html"><img src="img/tou3.jpg"></a></div>
+					<p><a href="#"></a></p>
+					<h5> introduce yourself</h5>
+				</div>
+				
+			</div>
+			<div id="icon">
+				<ul data-role="listview" data-inset="true">
+					<li><a href="#"><img src="img/vip.png" class="ui-li-icon" />vip会员</a></li>
+                	<li><a href="#"><img src="img/money.png" class="ui-li-icon" />我的钱包</a></li>
+                	<li><a href="#"><img src="img/sms.png" class="ui-li-icon" />建议反馈</a></li>
+                	<li><a href="#"><img src="img/info.png" class="ui-li-icon" />关于我们</a></li>
+                	<li id="btn1"><a href="#"><img src="img/settings (2).png" class="ui-li-icon" />应用设置</a></li>	
+				</ul>
+			</div>
+			<div data-role="footer" id="footer" data-position="fixed">
+				<div data-role="navbar">
+      				<ul>
+        				<li id="button1"><a href="#" class="ui-btn ui-btn-icon-top ui-icon-one  ui-nodisc-icon">首页</a></li>
+        				<li id="button2"><a href="#" class="ui-btn ui-btn-icon-top ui-icon-two  ui-nodisc-icon">单品</a></li>
+        				<li><a href="#" class="ui-btn ui-btn-icon-top ui-icon-three  ui-nodisc-icon">挑礼</a></li>
+        				<li id="button3"><a href="#" class="ui-btn ui-btn-icon-top ui-icon-four  ui-nodisc-icon">购物车</a></li>
+        				<li id="button4"><a href="#" class="ui-btn ui-btn-icon-top ui-icon-five  ui-nodisc-icon">我的</a></li>
+      				</ul>
+    			</div>
+			</div>
+	</body>
+	<script>
+		var user =localStorage.getItem('username');
+		if(!localStorage.getItem('username')){
+			$('p').html('请登录');
+			$('p').click(function(){
+				window.location.href="sign-in.html";
+			})
+		}else{
+			$('p').html(user);
+		}
+		$('#setting').click(function(){
+				window.location.href="setting.html";
+			})
+		$('#touxiang').click(function(){
+				window.location.href="setting.html";
+			})
+		$('#btn1').click(function(){
+				window.location.href="setting.html";
+		})
+		$('#button1').click(function(){
+				window.location.href="index.html";
+			})
+		$('#button2').click(function(){
+			window.location.href="goodslist.html";
+		})
+		$('#button4').click(function(){
+			window.location.href="shoppinglist.html";
+		})
+		$('#button5').click(function(){
+			window.location.href="myself.html";
+		})
+	</script>
+</html>
